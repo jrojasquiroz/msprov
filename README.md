@@ -1,3 +1,4 @@
+# Medidas sanitarias a nivel provincial, ¿un análisis correcto?
 ### Introducción
 
 Por el momento, las medidas sanitarias que dicta el Gobierno central se
