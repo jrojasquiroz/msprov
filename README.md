@@ -99,11 +99,12 @@ Python, PyQGIS y R. Los scripts se comparten en la misma carpeta que
 este documento.
 
 El proceso para identificar ciudades principales y los distritos que las
-conforman se puede revisar en los cuadernos P1, 1 y 2.
+conforman se puede revisar en los cuadernos [P1](https://github.com/jrojasquiroz/msprov/tree/main/P1-INEI%20vs%20GeoGPS-Peru), 
+[1](https://github.com/jrojasquiroz/msprov/blob/main/1-Limpieza%20de%20datos.ipynb) y [2](https://github.com/jrojasquiroz/msprov/blob/main/2-Identificacion%20de%20ciudades%20principales.ipynb).
 
 Para calcular las muertes acumuladas por *ciudad principal* y la
 provincia a la que pertenecen se siguió el proceso descrito en el
-cuaderno 6.
+[cuaderno 6](https://github.com/jrojasquiroz/msprov/blob/main/6-Ciudades%20vs%20Provincias.R).
 
 ### Resultados
 
