@@ -146,8 +146,8 @@ Los resultados indican que la tasa de mortalidad en la ciudad principal
 es mayor que la tasa de mortalidad en la provincia a la que pertenece en
 71 de esos casos.
 
-¿Por cuanto? En más de la mitad de casos, la diferencia entre estas
-tasas representa más del 50% de la mortalidad provincial.
+¿Por cuanto? En 45 de las 74 *ciudades principales*, la diferencia entre estas
+tasas representa más del 15% de la mortalidad provincial.
 
 ![Diferencia mortalidad - Ciudad vs Provincia](https://user-images.githubusercontent.com/34352451/125892134-fba97b40-224c-418c-9bd5-1baac5472174.png)
 
