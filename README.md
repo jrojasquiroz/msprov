@@ -2,8 +2,7 @@
 ### Introducción
 
 Por el momento, las medidas sanitarias que dicta el Gobierno central se
-hacen a nivel provincial, excepto por Lima Metropolitana. Entiendo (y
-esto puede ser un error) que, debido a eso, los análisis que se realizan
+hacen a nivel provincial, excepto por Lima Metropolitana. Entiendo que, debido a eso, los análisis que se realizan
 para tomar estas decisiones se hacen al mismo nivel espacial.
 
 ![PCM-alerta-moderada](https://user-images.githubusercontent.com/34352451/125891745-34e73c7c-e8ad-41a3-ac3c-299fffccb922.png)
