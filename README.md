@@ -4,15 +4,14 @@ Por el momento, las medidas sanitarias que dicta el Gobierno central se
 hacen a nivel provincial, excepto por Lima Metropolitana. Entiendo (y
 esto puede ser un error) que, debido a eso, los análisis que se realizan
 para tomar estas decisiones se hacen al mismo nivel espacial.
-<center>
-<img src="imagenes/PCM-alerta-moderada.png" height="450" />
-</center>
+
+![PCM-alerta-moderada](https://user-images.githubusercontent.com/34352451/125891745-34e73c7c-e8ad-41a3-ac3c-299fffccb922.png)
+
 Sin embargo, a diferencia de Lima Metropolitana, existen provincias en
 las que la población no está distribuida uniformemente al interior de
 estas. Ni tampoco su mancha urbana.
-<center>
-<img src="imagenes/SantaVSLima.jpeg" height="450" />
-</center>
+
+![SantaVSLima](https://user-images.githubusercontent.com/34352451/125891888-66edf6f9-bd02-4f59-957f-8902f030be68.jpeg)
 
 Como se puede ver, en Lima Metropolitana sí tiene sentido analizar la
 población en su conjunto porque está ubicada en una sola mancha urbana,
@@ -34,9 +33,7 @@ hacinamiento. Este tipo de centros poblados, que podemos llamar ciudades
 principales, podrían ser lugares en los que se concentren contagios y
 muertes por la enfermedad dentro de las provincias.
 
-<center>
-<img src="imagenes/p2.jpg" height="450" />
-</center>
+![p2](https://user-images.githubusercontent.com/34352451/125891942-e7a816c5-4c24-4445-976e-41fa105c90d5.jpg)
 
 Por tanto, mi duda es si, al momento de decidir medidas sanitarias, es
 correcto seguir analizando a todas las provincias como un conjunto, o si
@@ -116,27 +113,27 @@ su cartografía, limpieza de la misma y exclusión de Lima Metropolitana,
 hemos identificado 90 *ciudades principales* en el Perú, formadas por
 245 distritos.
 
-<center>
-<img src="imagenes/Ciudades%20en%20el%20Peru%20sin%20Lima.jpeg" height="450" />
-</center>
+![Ciudades en el Peru sin Lima](https://user-images.githubusercontent.com/34352451/125891975-3366ab27-db75-495c-a2bd-d3fff4188f01.jpeg)
 
 ¿Qué características presentan? Poblacionalmente, más de la mitad de
 estas *ciudades principales* acumulan más del 50% de todos los
 habitantes de la provincia en la que se encuentran.
 
-![](imagenes/Poblacion%20provincial%20en%20ciudades.png)
+![Poblacion provincial en ciudades](https://user-images.githubusercontent.com/34352451/125892033-e9122f91-3305-46a6-a8a1-a9861b35ae37.png)
 
 Además, más de la mitad de estas acumulan más del 50% de los
 fallecimientos por Covid-19 registrados en la provincia en la que están
 ubicadas.
 
-![](imagenes/Fallecidos%20provinciales%20en%20ciudades.png) ¿Existe una
-correlación? Aparentemente, sí. Es decir, a medida que las *ciudades*
+![Fallecidos provinciales en ciudades](https://user-images.githubusercontent.com/34352451/125892056-b6511a2c-c53f-41c3-a8c0-84fa1546950a.png)
+
+¿Existe una correlación? Aparentemente, sí. Es decir, a medida que las *ciudades*
 acumulan más población provincial se observa una mayor acumulación de
 fallecimientos por Covid-19 en esa ciudad de todos los registros
 provinciales.
 
-![](imagenes/Poblacion%20vs%20Fallecidos%20-%20Ciudades.png)
+![Poblacion vs Fallecidos - Ciudades](https://user-images.githubusercontent.com/34352451/125892105-8e0ccc5a-a637-42eb-9cce-bebaa9b32424.png)
+
 
 Luego de calcular la tasa de mortalidad por Covid-19 para cada *ciudad*,
 elegimos una por provincia, específicamente aquella que tenga el valor
@@ -151,9 +148,7 @@ es mayor que la tasa de mortalidad en la provincia a la que pertenece en
 ¿Por cuanto? En más de la mitad de casos, la diferencia entre estas
 tasas representa más del 50% de la mortalidad provincial.
 
-<center>
-![](imagenes/Diferencia%20mortalidad%20-%20Ciudad%20vs%20Provincia.png)
-</center>
+![Diferencia mortalidad - Ciudad vs Provincia](https://user-images.githubusercontent.com/34352451/125892134-fba97b40-224c-418c-9bd5-1baac5472174.png)
 
 ### Conclusiones
 
