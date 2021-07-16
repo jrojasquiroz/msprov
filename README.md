@@ -22,6 +22,8 @@ ejemplo.
 La situación de Santa es la misma para todas las provincias: tienen una
 mancha urbana y distribuición poblacional discontinua.
 
+![manchas urbanas aleatorias](https://user-images.githubusercontent.com/34352451/125897029-1a395281-be68-41bc-a182-98bffecc442b.jpeg)
+
 Y en algunas provincias existen manchas urbanas (llamésmoles centros
 poblados en adelante) que concentran más de la mitad de la población
 provincial, y que por su tamaño y densidad poblacional, pueden presentar
