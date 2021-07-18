@@ -81,8 +81,9 @@ enviaron una descripción de la metodología que siguieron. De su
 revisión, entiendo que toman en cuenta continuidad entre manchas urbanas
 y relaciones económicas (y por tanto flujos de movilidad)<sup id="a3">[3](#f3)</sup>.
 
-Lo que haré será utilizar esta cartografía para conocer qué distritos
-conforman cada mancha urbana.
+Como la intención es que este análisis sea preliminar,
+asumiremos que la delimitación de INEI es la adecuada, haremos una limpieza sobre ella, y la utilizaremos para evaluar 
+las ciudades principales identificadas por esta fuente de información.
 
 #### Fallecimientos por Covid-19
 
@@ -110,7 +111,7 @@ provincia a la que pertenecen se siguió el proceso descrito en el
 
 ### Resultados
 
-Como se mencionó en la introducción, hemos trabajado sobre la base de
+Como se mencionó en el apartado anterior, he trabajado sobre la base de
 las 92 ciudades principales identificadas por INEI. Tras la revisión de
 su cartografía, limpieza de la misma y exclusión de Lima Metropolitana,
 hemos identificado 90 *ciudades principales* en el Perú, formadas por
