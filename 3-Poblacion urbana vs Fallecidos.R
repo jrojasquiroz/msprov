@@ -1,11 +1,11 @@
-##An·lisis 1 (AN1)
-#Obtenemos (1)PoblaciÛn urbana distrital (total, sin ponderar) vs.
+##An√°lisis 1 (AN1)
+#Obtenemos (1)Poblaci√≥n urbana distrital (total, sin ponderar) vs.
 #             Fallecidos distritales (totales, sin ponderar)
-#          (2)PoblaciÛn urbana distrital(como % del total de poblaciÛn)
+#          (2)Poblaci√≥n urbana distrital(como % del total de poblaci√≥n)
 #             vs. Fallecidos distritales (por cada 100.000 habitantes)
 
 
-setwd("G:/Mi unidad/Documentos personales/Muertes Covid-19 por ¡reas urbanas - Per˙/1-C·lculos previos con lÌmites INEI/")
+setwd("G:/Mi unidad/Documentos personales/Muertes Covid-19 por √Åreas urbanas - Per√∫/1-C√°lculos previos con l√≠mites INEI/")
 
 library(ggplot2)
 library(dplyr)
@@ -16,7 +16,7 @@ fallecidos_covid <- read_delim("rawdata/fallecidos_covid.csv",
                                trim_ws = TRUE)
 head(fallecidos_covid)
 
-#1.Para poder hacer una tabla dinamica, aÒadimos una columna
+#1.Para poder hacer una tabla dinamica, a√±adimos una columna
 #que repite siempre el valor 1, que permite contar cada muerte
 fallecidos_covid$Muertes <- rep(1)
 
@@ -35,6 +35,8 @@ an1=merge(pobxdist,mxd,by="UBIGEO")
 
 #5.Calculamos las muertes ponderadas por 100.000 hab
 an1$MuertesPond=an1$Muertes/an1$PobTot*100000
+
+#6.Exportamos 
 
 #6.Graficamos
 ggplot(an1) +
