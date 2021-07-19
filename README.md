@@ -7,7 +7,7 @@ para tomar estas decisiones se hacen al mismo nivel espacial.
 
 ![PCM-alerta-moderada](https://user-images.githubusercontent.com/34352451/125891745-34e73c7c-e8ad-41a3-ac3c-299fffccb922.png)
 
-Sin embargo, no estoy tan seguro de que eso tenga sentido. A diferencia de Lima Metropolitana, en las demás provincias del país la población no comparte una única mancha urbana, sino que se distribuye de manera separada, como se puede ver en la siguiente imagen. De esta manera, el hecho de que dos distritos estén juntos no implica necesariamente que el flujo de personas, actividades y mercancías sea tan constante como lo puede ser en los distritos que conforman Lima Metropolitana. Y, por tanto, es posible que los patrones de contagios y muertes tampoco.
+Sin embargo, no estoy tan seguro de que eso tenga sentido. A diferencia de Lima Metropolitana, en las demás provincias del país la población no comparte una única mancha urbana, sino que se distribuye de manera separada, como se puede ver en la siguiente imagen. De esta manera, el hecho de que dos distritos estén juntos no implica necesariamente que el flujo de personas, actividades y mercancías sea tan constante como lo puede ser en los distritos que conforman la ciudad capital. Y, por tanto, es posible que los patrones de contagios y muertes tampoco.
 
 ![SantaVSLima](https://user-images.githubusercontent.com/34352451/125891888-66edf6f9-bd02-4f59-957f-8902f030be68.jpeg)
 
