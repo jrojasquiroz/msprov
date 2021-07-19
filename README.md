@@ -15,7 +15,7 @@ Sin embargo, no estoy tan seguro de que eso tenga sentido. A diferencia de Lima 
 
 ¿Eso tiene relevancia para evaluar la situación sanitaria de una provincia? Mi impresión es que sí, porque los fallecidos por Covid-19 se suelen concentrar en entornos urbanos, posiblemente por condiciones propias de estos: actividades económicas en espacios cerrados, tugurización, o mayor movilidad de personas hacia el interior de estas y por tanto mayor aglomeración en comparación con entornos rurales.
 
-![Poblacion urbana vs Fallecidos provinciales - General - version 3](https://user-images.githubusercontent.com/34352451/126086826-489a67b9-b7fe-459f-911f-f922fb2b298a.jpeg)
+![Poblacion urbana vs Fallecidos provinciales - General - version 3a](https://user-images.githubusercontent.com/34352451/126230752-62af6620-39fe-44b4-b18d-75546ae13cb6.jpeg)
 
 Dicho de otra manera, si la población en una determinada provincia se agrupa en unos cuantos distritos que conforman una ciudad, ¿no es posible que los contagios se comporten de la misma manera?
 
