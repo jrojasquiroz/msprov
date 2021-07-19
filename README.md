@@ -7,53 +7,23 @@ para tomar estas decisiones se hacen al mismo nivel espacial.
 
 ![PCM-alerta-moderada](https://user-images.githubusercontent.com/34352451/125891745-34e73c7c-e8ad-41a3-ac3c-299fffccb922.png)
 
-Sin embargo, a diferencia de Lima Metropolitana, existen provincias en
-las que la población no está distribuida uniformemente al interior de
-estas. Ni tampoco su mancha urbana.
+Sin embargo, no estoy tan seguro de que eso tenga sentido. A diferencia de Lima Metropolitana, en las demás provincias del país la población no comparte una única mancha urbana, sino que se distribuye de manera separada, como se puede ver en la siguiente imagen. De esta manera, el hecho de que dos distritos estén juntos no implica necesariamente que el flujo de personas, actividades y mercancías sea tan constante como lo puede ser en los distritos que conforman Lima Metropolitana. Y, por tanto, es posible que los patrones de contagios y muertes tampoco.
 
 ![SantaVSLima](https://user-images.githubusercontent.com/34352451/125891888-66edf6f9-bd02-4f59-957f-8902f030be68.jpeg)
 
-Como se puede ver, en Lima Metropolitana sí tiene sentido analizar la
-población en su conjunto porque está ubicada en una sola mancha urbana,
-que comparte actividades y flujos de movilidad hacia su interior de
-manera más homogénea que en la provincia del Santa, por citar un
-ejemplo.
-
-La situación de Santa es la misma para todas las provincias: tienen una
-mancha urbana y distribuición poblacional discontinua.
-
 ![manchas urbanas aleatorias](https://user-images.githubusercontent.com/34352451/125897029-1a395281-be68-41bc-a182-98bffecc442b.jpeg)
 
-Y en algunas provincias existen manchas urbanas (llamésmoles centros
-poblados en adelante) que concentran más de la mitad de la población
-provincial, y que por su tamaño y densidad poblacional, pueden presentar
-características que pueden entenderse como más riesgosas para la
-transmisión del SARS-CoV-2 en comparación con los demás centros poblados
-que conforman una provincia: mayores aglomeraciones, mayor movilidad
-hacia su interior, actividades económicas en espacios cerrados,
-hacinamiento. Este tipo de centros poblados, que podemos llamar ciudades
-principales, podrían ser lugares en los que se concentren contagios y
-muertes por la enfermedad dentro de las provincias.
+¿Eso tiene relevancia para evaluar la situación sanitaria de una provincia? Mi impresión es que sí, porque los fallecidos por Covid-19 se suelen concentrar en entornos urbanos, posiblemente por condiciones propias de estos: actividades económicas en espacios cerrados, tugurización, o mayor movilidad de personas hacia el interior de estas y por tanto mayor aglomeración en comparación con entornos rurales.
 
-![p2](https://user-images.githubusercontent.com/34352451/125891942-e7a816c5-4c24-4445-976e-41fa105c90d5.jpg)
 
-Por tanto, mi duda es si, al momento de decidir medidas sanitarias, es
-correcto seguir analizando a todas las provincias como un conjunto, o si
-más bien debería analizarse su ciudad principal para dictar medidas al
-resto de la provincia.
 
-En adelante lo que haré será (1) identificar ciudades principales en el
-país, (2) identificar qué distritos conforman cada ciudad, (3) calcular
-las muertes acumuladas por Covid-19 para cada ciudad principal, (4)
-hacer el mismo cálculo que en el paso anterior pero para las provincias,
-y (5) comparar las tasas obtenidas para cada ciudad principal con las de
-las provincias a las que pertenecen.
+Dicho de otra manera, si la población en una determinada provincia se agrupa en unos cuantos distritos que conforman una ciudad, ¿no es posible que los contagios se comporten de la misma manera?
 
-Esto con la finalidad de ver si en realidad existe un desfase entre los
-indicadores para una ciudad principal con los de la provincia a la que
-pertenece. De existir una diferencia significativa creo que sí valdría
-la pena mostrar los resultados a una especialista en epidemiología o
-salud pública para discutir su relevancia.
+De ser así, ¿no sería más preciso evaluar la situación sanitaria de la *ciudad principal* de las provincias para dictar medidas al resto de ella? 
+
+En ese sentido, lo que planteo en este documento es (1) identificar *ciudades principales* en el país, (2) identificar qué distritos conforman cada ciudad, (3) calcular las muertes acumuladas por Covid-19 para cada ciudad principal, (4) hacer el mismo cálculo que en el paso anterior pero para las provincias, y (5) comparar las tasas obtenidas para cada ciudad principal con las de las provincias a las que pertenecen.
+
+Esto con la finalidad de ver si en realidad existe un desfase entre el indicador de mortalidad para una ciudad principal con los de la provincia a la que pertenece. De existir una diferencia significativa creo que sí valdría la pena mostrar los resultados a una especialista en epidemiología o salud pública para discutir su relevancia.
 
 ### Metodología y fuentes de información
 
