@@ -1,20 +1,24 @@
-##An·lisis 2 (AN2)
-#Obtenemos (1) PoblaciÛn provincial
+##An√°lisis 2 (AN2)
+#Obtenemos (1) Poblaci√≥n provincial
 #              vs. Fallecidos provinciales
 #              Para la primera y segunda ola, y para ambas en conjunto
-##An·lisis 3 (AN3)
-#          (2) PoblaciÛn provincial 
-#              vs. PoblaciÛn urbana provincial
+##An√°lisis 3 (AN3)
+#          (2) Poblaci√≥n provincial 
+#              vs. Poblaci√≥n urbana provincial
+##An√°lisis 3 versi√≥n 2 (AN3_V2)
+#          (3) Poblaci√≥n urbana provincial
+#              vs.Fallecidos provinciales
+#              (En este caso se excluyen distritos de Lima Metropolitana)
 
-#PoblaciÛn provincial   =PoblaciÛn del distrito/PoblaciÛn de la provincia a la
+#Poblaci√≥n provincial   =Poblaci√≥n del distrito/Poblaci√≥n de la provincia a la
 #                        que pertenece.
 #Fallecidos provinciales=Fallecidos por Covid-19 en el distrito/Fallecidos
 #                        por Covid-19 en toda la provincia a la que pertenece
-#PoblaciÛn urbana
-#provincial             =PoblaciÛn urbana del distrito/PoblaciÛn urbana
+#Poblaci√≥n urbana
+#provincial             =Poblaci√≥n urbana del distrito/Poblaci√≥n urbana
 #                        de la provincia a la que pertenece
 
-setwd("G:/Mi unidad/Documentos personales/Muertes Covid-19 por ¡reas urbanas - Per˙/1-C·lculos previos con lÌmites INEI")
+setwd("G:/Mi unidad/Documentos personales/Muertes Covid-19 por √Åreas urbanas - Per√∫/1-C√°lculos previos con l√≠mites INEI")
 library(ggplot2)
 library(dplyr)
 library(readr)
@@ -31,7 +35,7 @@ pertenencia <- read_csv("rawdata/Distritos Provincias y Departamentos.csv",
 pertenencia=select(pertenencia, CODUBIGEO,IDPROV,CCDD)
 names(pertenencia)[1]="UBIGEO"
 
-#1.Para poder hacer una tabla dinamica, aÒadimos una columna
+#1.Para poder hacer una tabla dinamica, a√±adimos una columna
 #que repite siempre el valor 1, que permite contar cada muerte
 fallecidos_covid$Muertes <- rep(1)
 
@@ -49,7 +53,7 @@ mola1 <- ola1 %>%
 mola2 <- ola2%>%
   group_by(UBIGEO)%>%
   summarise(Muertes=sum(Muertes))
-  #3.1.Les aÒadimos las provincias a los que pertenecen cada distrito
+  #3.1.Les a√±adimos las provincias a los que pertenecen cada distrito
   mola1=merge(mola1,pertenencia,by="UBIGEO")
   mola2=merge(mola2,pertenencia,by="UBIGEO")
 
@@ -172,7 +176,7 @@ ggplot(an2_dosolas) +
         plot.title = element_text(size = 18.5),
         plot.subtitle = element_text(size = 17.5))
 
-#10.Ahora,øson los distritos en donde hay mayor poblacion provincial (PDPROV)
+#10.Ahora,¬øson los distritos en donde hay mayor poblacion provincial (PDPROV)
 #aquellos en los que existe mayor poblacion urbana provincial?
 pxd <- read_excel("rawdata/(PROCESADO) Poblacion Urbana y Total-Distritos INEI 2017.xlsx")
 
@@ -216,3 +220,90 @@ ggplot(an3) +
         axis.text = element_text(size = 13.5),
         plot.title = element_text(size = 18.5),
         plot.subtitle = element_text(size = 17.5))
+
+#11. Para crear un mapa de Poblaci√≥n urbana provincial y
+#Fallecidos provinciales
+library(dplyr)
+an3_v2<-full_join(an3,an2_dosolas,by="UBIGEO")
+
+names(an3_v2)
+an3_v2=select(an3_v2,UBIGEO,IDPROV,PUPROV,PDPROV.x,MDPROV)
+names(an3_v2)[4]="PDPROV"
+
+#11.1.Unir datos de fallecidos durante primera y segunda ola
+
+an3_v2=full_join(an3_v2,an2_ola1,by="UBIGEO")
+names(an3_v2)
+names(an3_v2)[5]="MDPROV_2O"
+names(an3_v2)[7]="MDPROV_O1"
+an3_v2$PDPROV.y <- NULL 
+
+an3_v2=full_join(an3_v2,an2_ola2,by="UBIGEO")
+names(an3_v2)
+an3_v2$PDPROV <- NULL
+names(an3_v2)[7]="MDPROV_O2"
+names(an3_v2)[4]="PDPROV"
+
+an3_v2 <- mutate_all(an3_v2, ~replace(., is.na(.), 0)) #Convertimos NAs en 0
+
+#12.2.Sacamos del an√°lisis los distritos de Lima Metropolitana
+an3_v2 <- an3_v2 %>%
+  filter(IDPROV != 1501 & IDPROV != 701 )
+
+
+#12.3.Graficamos
+
+#12.3.1.Para las dos olas
+ggplot(an3_v2) +
+  aes(x = PUPROV, y = MDPROV_2O) +
+  geom_point(shape = "circle", size = 1.5, colour = "#112446") +
+  geom_smooth(method="lm", se=T) +
+  xlab("Poblaci√≥n urbana provincial") +
+  ylab("Fallecidos provinciales")+
+  labs(
+    title = " ",
+    subtitle = "A nivel distrital"#,
+    #caption = "caption"
+  )+
+  theme_minimal()
+
+#12.3.2.Para la primera ola
+ggplot(an3_v2) +
+  aes(x = PUPROV, y = MDPROV_O1) +
+  geom_point(shape = "circle", size = 1.5, colour = "#112446") +
+  geom_smooth(method="lm", se=T) +
+  xlab("Poblaci√≥n urbana provincial (%)") +
+  ylab("Fallecidos provinciales por Covid-19 (%)")+
+  labs(title="Primera ola",
+       subtitle = "Por distritos"#,
+    #caption = "caption"
+  )+
+  ylim(0,1L)+
+  theme_minimal()+ #esto le pone el fondo blanco
+  theme(axis.title = element_text(size = 20),
+        axis.text = element_text(size = 16.5),
+        plot.title = element_text(size = 21.5),
+        plot.subtitle = element_text(size = 20.5))
+
+
+ggplot(an3_v2) +
+  aes(x = PUPROV, y = MDPROV_O2) +
+  geom_point(shape = "circle", size = 1.5, colour = "#112446") +
+  geom_smooth(method="lm", se=T) +
+  xlab("Poblaci√≥n urbana provincial (%)") +
+  ylab("Fallecidos provinciales por Covid-19 (%)")+
+  labs(title="Segunda ola",
+    subtitle = "Por distritos"#,
+       #caption = "caption"
+  )+
+  ylim(0,1L)+
+  theme_minimal()+ #esto le pone el fondo blanco
+  theme(axis.title = element_text(size = 20),
+        axis.text = element_text(size = 16.5),
+        plot.title = element_text(size = 21.5),
+        plot.subtitle = element_text(size = 20.5))
+
+
+#11.2.Exportamos
+library(openxlsx)
+write.csv(an3_v2,"data/8-analisis3_v2.csv")
