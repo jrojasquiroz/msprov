@@ -19,15 +19,15 @@ Sin embargo, no estoy tan seguro de que eso tenga sentido. A diferencia de Lima 
 
 Dicho de otra manera, si la población en una determinada provincia se agrupa en unos cuantos distritos que conforman una ciudad, ¿no es posible que los contagios se comporten de la misma manera?
 
-De ser así, ¿no sería más preciso evaluar la situación sanitaria de la *ciudad principal* de las provincias para dictar medidas al resto de ella? 
+De ser así, ¿no sería más preciso evaluar la situación sanitaria de la *ciudad principal* de una provincia para dictar medidas al resto de ella? 
 
-Lo que busco en este documento es comparar la tasa de mortalidad por Covid-19 de la *ciudad principal* de una provincia X con la tasa de mortalidad de la misma provincia. Y repetir el proceso para todas las provincias del país. De manera que pueda identificar aquellas provincias en las que existe un desfase entre estos indicadores.
+Lo que busco en este documento es comparar la tasa de mortalidad por Covid-19 de *ciudades principales* con la tasa de mortalidad de las provincias a las que pertenecen. De manera que pueda identificar aquellas provincias en las que existe un desfase entre estos indicadores.
 
-Para lograrlo, me planteo (1) identificar ciudades principales en el país, (2) identificar qué distritos conforman cada ciudad, (3) calcular las muertes acumuladas por Covid-19 para cada ciudad principal, (4) hacer el mismo cálculo que en el paso anterior pero para las provincias, y (5) comparar las tasas obtenidas para cada ciudad principal con las de las provincias a las que pertenecen.
+Para lograrlo, me planteo (1) identificar y delimitar *ciudades principales* en el país, (2) identificar qué distritos conforman cada ciudad, (3) calcular las muertes acumuladas por Covid-19 para cada *ciudad principal*, (4) hacer el mismo cálculo que en el paso anterior pero para las provincias, y (5) comparar las tasas obtenidas para cada *ciudad principal* con las de las provincias a las que pertenecen.
 
 Esta metodología puede significar un aporte al momento de analizar condiciones epidemiológicas en el país debido a que permitiría afinar las medidas sanitarias a nivel provincial. No es común que especialistas de ramas ajenas a los estudios urbanos conozcan los riesgos de asumir que los límites administrativos responden al real funcionamiento de ciudades o regiones. 
 
-De encontrarse una diferencia significativa entre la tasa de mortalidad de ciudades principales y las provincias en las que se encuentran, se podría (1) recomendar calcular otros indicadores epidemiológicos más complejos para corroborar el fenómeno, y (2) ajustar las medidas sanitarias provinciales evaluando sus *ciudades principales*.
+De encontrarse una diferencia significativa entre la tasa de mortalidad de ciudades principales y las provincias en las que se encuentran, se podría (1) recomendar calcular otros indicadores epidemiológicos más complejos para corroborar el fenómeno, y (2) ajustar las medidas sanitarias provinciales evaluando su *ciudad principal*.
 
 ### Metodología y fuentes de información
 
@@ -51,12 +51,13 @@ Sin embargo, con esta misma cartografía INEI ha identificado 92
 cada una con su respectiva delimitación. Llegué a ella porque, por
 correo electrónico, solicité la cartografía de las manzanas del Censo de
 2017 y me las enviaron por el mismo medio. La limitante es que no me
-enviaron una descripción de la metodología que siguieron. De su
-revisión, entiendo que toman en cuenta continuidad entre manchas urbanas
-y relaciones económicas (y por tanto flujos de movilidad)<sup id="a3">[3](#f3)</sup>.
+enviaron una descripción de la metodología que siguieron. 
+
+De su revisión, entiendo que toman en cuenta continuidad entre manchas urbanas
+y relaciones económicas entre ellas (y por tanto flujos de movilidad)<sup id="a3">[3](#f3)</sup>.
 
 Como la intención es que este análisis sea preliminar,
-asumiremos que la delimitación de INEI es la adecuada, haremos una limpieza sobre ella, y la utilizaremos para conocer que
+asumiremos que la delimitación de INEI es la adecuada, haremos una limpieza sobre ella, y la utilizaremos para conocer qué
 distritos conforman cada *ciudad principal* del país. 
 
 #### Fallecimientos por Covid-19
@@ -70,7 +71,7 @@ fallecidos por Covid-19. Hace poco más de un mes tuvo una actualización
 en su metodología para sincerar las muertes por Covid-19 en el país.
 
 Estos datos se agruparán por distritos una vez identificadas las
-*ciudades principales* del país.
+*ciudades principales*.
 
 #### Replicabilidad
 
@@ -97,12 +98,12 @@ se pueden identificar 90 *ciudades principales* en el Perú, formadas por
 ![Ciudades en el Peru sin Lima](https://user-images.githubusercontent.com/34352451/125891975-3366ab27-db75-495c-a2bd-d3fff4188f01.jpeg)
 
 ¿Qué características presentan? Poblacionalmente, más de la mitad de
-estas *ciudades principales* acumulan más del 50% de todos los
+estas *ciudades principales* acumulan por lo menos el 50% de todos los
 habitantes de la provincia en la que se encuentran.
 
 ![Poblacion provincial en ciudades](https://user-images.githubusercontent.com/34352451/125892033-e9122f91-3305-46a6-a8a1-a9861b35ae37.png)
 
-Además, más de la mitad de estas acumulan más del 50% de los
+Además, más de la mitad de estas acumulan por lo menos el 50% de los
 fallecimientos por Covid-19 registrados en la provincia en la que están
 ubicadas.
 
@@ -110,23 +111,23 @@ ubicadas.
 
 ¿Existe una correlación? Aparentemente, sí. Es decir, a medida que las *ciudades*
 acumulan más población provincial se observa una mayor acumulación de
-fallecimientos por Covid-19 en esa ciudad de todos los registros
+fallecimientos por Covid-19 en esa ciudad respecto de todos los registros
 provinciales.
 
 ![Poblacion vs Fallecidos - Ciudades](https://user-images.githubusercontent.com/34352451/125892105-8e0ccc5a-a637-42eb-9cce-bebaa9b32424.png)
 
 Luego de calcular la tasa de mortalidad por Covid-19 para cada *ciudad*,
 elegimos una por provincia, específicamente aquella que tenga el valor
-más alto dentro de su provincia, y la comparamos con la misma tasa de la
+más alto, y la comparamos con la misma tasa de la
 provincia a la que pertenece. De esta manera, finalmente analizamos 74
 *ciudades principales*.
 
-Los resultados indican que la tasa de mortalidad en la ciudad principal
+Los resultados indican que la tasa de mortalidad en la *ciudad principal*
 es mayor que la tasa de mortalidad en la provincia a la que pertenece en
 71 de esos casos.
 
 ¿Por cuánto? En 45 de los 71 casos, la *ciudad principal* muestra una tasa de mortalidad 15% más alta que la tasa de mortalidad
-de la provincia a la que pertenece. 
+de la provincia a la que pertenece. Y en el caso más alto, este valor es de 150%.
 
 ![Diferencia mortalidad - Ciudad vs Provincia](https://user-images.githubusercontent.com/34352451/125892134-fba97b40-224c-418c-9bd5-1baac5472174.png)
 
