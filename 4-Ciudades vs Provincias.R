@@ -1,14 +1,15 @@
-##Analisis 4 (AN4)
-#Obtenemos dos df que nos permiten conocer:
+##¿Qué obtenemos 
+#Obtenemos dos dataframes que nos permiten conocer:
 #(1)Fallecidos por cada 100.000 habitantes por ciudad*(MPond_Ciud)
 #(2)Fallecidos por cada 100.000 habitantes de la provincia a la que
 #   pertenece la ciudad* (MPond_Prov)
-#(3)Porcentaje que representa la poblaci?n de la ciudad* respecto
-#   de la poblaci?n de toda la provincia (PCPROV)
+#(3)Porcentaje que representa la población de la ciudad* respecto
+#   de la población de toda la provincia (PCPROV)
 #(4)Diferencia entre (1) y (2) (DIFMP)
 #(5)Porcentaje que representa DIFMP sobre MPond_Prov (DIFMP_PR)
 #(6)Desfase porcentual entre ciudad y provincia (PR)
-#*En realidad es sobre los distritos que conforman las ciudades
+
+#*En realidad es sobre los distritos que conforman las ciudades.
 
 #Se excluye a Lima y Callao
 
