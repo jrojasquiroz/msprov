@@ -159,7 +159,7 @@ an4_2<-an4 %>%
   an4_2$PR=(an4_2$MPond_Ciud-an4_2$MPond_Prov)/an4_2$MPond_Prov*100
   
   
-  ####ESTE ES EL GRAFICO FINAL DEL PAPER
+  ####FIGURA 5 DEL PAPER
   g1<-ggplot(an4_2, aes(reorder(CIUDAD,PR), PR)) +
   geom_bar(stat = "identity", 
            #alpha=0.9, 
@@ -189,7 +189,7 @@ an4_2<-an4 %>%
   
   #############
 
-  ######
+  ###### FIGURA 4 DEL PAPER
   #Pob prov. vs. Fallecidos prov. POR CIUDAD
   g2 <- ggplot(an4) +
     aes(x = PCPROV, y = MCPROV) +
